@@ -14,7 +14,7 @@ const Login = () => {
     });
   };
   if (state.isAuth) {
-    return <Navigate to="/" />;
+    return <Navigate to="/products" />;
   }
   return (
     <div>

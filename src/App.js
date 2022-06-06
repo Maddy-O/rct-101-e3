@@ -20,15 +20,16 @@ function App() {
               <Products />
             </RequiredAuth>
           }
-        />
-        <Route
-          path="/products/:id"
-          element={
-            <RequiredAuth>
-              <Product />
-            </RequiredAuth>
-          }
-        />
+        >
+          <Route
+            path=":id"
+            element={
+              <RequiredAuth>
+                <Product />
+              </RequiredAuth>
+            }
+          />
+        </Route>
       </Routes>
     </div>
   );

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Product from "./Product/Product";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -19,10 +19,7 @@ const Products = () => {
   return (
     <div>
       {data.map((e) => (
-        <div key={e.id}>
-          <h3>{e.name}</h3>
-          <p>{e.description}</p>
-        </div>
+        <Product key={e.id} id={e.id} />
       ))}
     </div>
   );
