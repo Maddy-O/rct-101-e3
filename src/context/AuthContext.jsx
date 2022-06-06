@@ -1,16 +1,30 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useReducer } from "react";
 
 export const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => {
-  const [isAuth, setAuth] = useState(false);
+const initState = {
+  isAuth: false,
+};
 
-  const handleAuth = (state) => {
-    setAuth(!isAuth);
-  };
+function reducer(state, action) {
+  switch (action.type) {
+    case "Login": {
+      return { ...state, isAuth: true };
+    }
+    case "Logout": {
+      return { ...state, isAuth: false };
+    }
+    default: {
+      return state;
+    }
+  }
+}
+
+export const AuthProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initState);
 
   return (
-    <AuthContext.Provider value={{ isAuth, handleAuth }}>
+    <AuthContext.Provider value={[state, dispatch]}>
       {children}
     </AuthContext.Provider>
   );
