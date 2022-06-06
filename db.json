@@ -53,14 +53,14 @@
       "id": 2
     },
     {
-      "productId": 3,
-      "count": 1,
-      "id": 3
-    },
-    {
       "productId": 1,
       "count": 1,
       "id": 4
+    },
+    {
+      "productId": 3,
+      "count": 3,
+      "id": 5
     }
   ]
 }
