@@ -4,15 +4,16 @@ export const AuthContext = createContext();
 
 const initState = {
   isAuth: false,
+  isHome: false,
 };
 
 function reducer(state, action) {
   switch (action.type) {
     case "Login": {
-      return { ...state, isAuth: true };
+      return { ...state, isAuth: true, isHome: true };
     }
     case "Logout": {
-      return { ...state, isAuth: false };
+      return { ...state, isAuth: false, isHome: true };
     }
     default: {
       return state;
