@@ -7,11 +7,11 @@ const Product = ({ id }) => {
   // Note: this id should come from api
   const [data, setData] = useState([]);
   const { IncreaseCart } = useContext(CartContext);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
 
   const handleCount = (value) => {
     let sum = value + count;
-    if (sum > 0) {
+    if (sum >= 0) {
       setCount(value + count);
       IncreaseCart(value);
     }
@@ -30,10 +30,7 @@ const Product = ({ id }) => {
 
   const product = { id: 1 };
   return (
-    <div
-      data-cy={`product-${product.id}`}
-      style={{ boeder: "1px solid black" }}
-    >
+    <div data-cy={`product-${product.id}`} className="productCard">
       <h3 data-cy="product-name">{data.name}</h3>
       <h6 data-cy="product-description">{data.description}</h6>
       <button data-cy="product-add-item-to-cart-button">Add to cart</button>

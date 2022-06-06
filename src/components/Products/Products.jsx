@@ -17,7 +17,7 @@ const Products = () => {
   }, []);
 
   return (
-    <div>
+    <div className="productsCard">
       {data.map((e) => (
         <Product key={e.id} id={e.id} />
       ))}

@@ -32,7 +32,24 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.productsCard {
+  width: 70%;
+  margin: auto;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+.productCard {
+  border: 1px solid gray;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 3px gray;
+  padding: 15px
 }
