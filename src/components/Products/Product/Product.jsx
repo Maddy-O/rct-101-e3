@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
 
 const Product = ({ id }) => {
@@ -26,7 +25,7 @@ const Product = ({ id }) => {
         setData(res.data);
       })
       .catch((err) => console.log(err.message));
-  }, []);
+  }, [id]);
 
   const product = { id: 1 };
   return (

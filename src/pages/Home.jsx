@@ -10,7 +10,6 @@ const Home = () => {
   } else {
     return <Navigate to="/products" />;
   }
-  return <div>Home</div>;
 };
 
 export default Home;

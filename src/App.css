@@ -53,3 +53,33 @@
   box-shadow: 3px 3px 3px 3px gray;
   padding: 15px
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #282c34;
+  color: aliceblue;
+  height: 50px;
+  align-items: center;
+  padding: 0px 15px;
+  margin-bottom: 15px;
+}
+
+.navbarLink {
+  text-decoration: none;
+  text-align: left;
+  color: aliceblue;
+}
+
+.navbarButton {
+  text-decoration: none;
+  background-color: #61dafb;
+  border: none;
+  width: 75px;
+  height: 25px;
+  box-shadow: 1px 1px 1px 1px gray;
+}
+
+.navbarButtonLink {
+  text-decoration: none;
+}
